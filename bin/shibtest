@@ -1,0 +1,6 @@
+#!/bin/sh
+
+/usr/local/bin/webisoget \
+	-text \
+	-formfile /local/etc/webisoget/test.login 
+	-url `cat /local/etc/webisoget/test.url`
