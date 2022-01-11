@@ -28,11 +28,11 @@ You need to do other things on the host that will run the test:
 	sudo apt-get install libcurl4-openssl-dev
 
 - download webisoget (software by Jim Fox from the University of Washington)
-	wget http://staff.washington.edu/fox/webisoget/webisoget-2.4.tar.gz
-
+	git clone https://github.com/UWIT-IAM/webisoget.git
+	
 - compile and install it
-	tar xf webisoget-2.4.tar.gz
-	cd webisoget-2.4
+	cd webisoget
+	bash ./boot
 	./configure
 	make
 	make install
