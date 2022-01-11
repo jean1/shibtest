@@ -25,29 +25,38 @@ or not.
 You need to do other things on the host that will run the test:
 
 - install dependencies
-	sudo apt-get install libcurl4-openssl-dev
-
+```
+sudo apt-get install libcurl4-openssl-dev
+```
 - download webisoget (software by Jim Fox from the University of Washington)
-	git clone https://github.com/UWIT-IAM/webisoget.git
-	
+```
+git clone https://github.com/UWIT-IAM/webisoget.git
+```	
 - compile and install it
-	cd webisoget
-	bash ./boot
-	./configure
-	make
-	make install
-
+```
+cd webisoget
+bash ./boot
+./configure
+make
+make install
+```
 - create webisoget form (see example directory)
-	mkdir -p /local/etc/webisoget
-	vi /local/etc/webisoget/test.login
-
-	domain=cas.example.com; username=shibusertest; password=XXXXXXXXXXXXXX;
-	domain=idp.example.com; "submit_value=Continue;"
-
+```	
+mkdir -p /local/etc/webisoget
+vi /local/etc/webisoget/test.login
+```
+```
+domain=cas.example.com; username=shibusertest; password=XXXXXXXXXXXXXX;
+domain=idp.example.com; "submit_value=Continue;"
+```
 - configure url
-	vi /local/etc/webisoget/test.url
-
-	https://shibsup.example.com/secure/
-
+```	
+vi /local/etc/webisoget/test.url
+```
+```
+https://shibsup.example.com/secure/
+```
 - run the test 
-	./bin/shibtest
+```	
+./bin/shibtest
+```
